@@ -1,0 +1,256 @@
+*{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #615EFC;
+    color: #EEEEEE;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    
+}
+
+.flex {
+    display: flex; 
+}
+
+.choice-button {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.computer{
+    font-size: 2rem;
+    padding:  0px 20px;
+    border-radius: 100px;
+    color: #EEEEEE;
+    background-color: #4d4ac9;
+    width: 50px;
+}
+
+.user{
+    font-size: 2rem;
+    padding:  0px 20px;
+    border-radius: 100px;
+    color: #EEEEEE;
+    background-color: #4d4ac9;
+    width: 50px;
+}
+
+.names {
+    width: 55%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+    text-align: center;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+ .final-scoree {
+    width: 50%;
+    right: 100px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    height: 10rem;
+    font-size: 5rem;
+    border-radius: 10px;
+    color: #615EFC;
+    font-weight: 700;
+    background-color: #EEEEEE;
+}
+
+.game {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+#play-button{
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 3rem;
+    position: absolute;
+    top: 50vh;
+    color: #615EFC;
+    cursor: pointer;
+}
+
+.mid-game {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result,#countdown{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+#countdown{
+    position: absolute;
+    bottom: 15%;
+}
+
+#result{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#choices-container {
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 70px;
+}
+
+#choices-container button{
+    width: 200px;    
+    height: 200px;
+    border-radius: 500px;
+}
+
+.choice-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    background-color: #615efc00;
+    border: 1px solid #4c4ac900;
+}
+
+.choice-button:hover {
+    transform: scale(90%);
+}
+
+.whatsnext {
+    display: flex;
+    gap: 1rem;
+}
+
+.whatsnext button {
+    padding: 1rem;
+    width: 150px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#next-round-button{
+    font-size: 1.2rem;
+    color: #615EFC;
+}
+
+.restart-btnplace{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 5rem;
+    align-items: center;
+}
+
+#retry-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 100;
+    color: #615EFC;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#rock{
+    background-image: url('./src/assets/OncomingFist.png');
+    background-size: cover; 
+    background-position: calc(50% - 3px) center; 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+#paper{
+    background-image: url('./src/assets/Hand.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+#scissors{
+    background-image: url('./src/assets/Victory.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: 100%;
+}
+
+.selected {
+    transform: scale(120%);
+    height: 200px;
+    width: 200px;
+    border: 3px solid #4d4ac9;
+}
+
+@media only screen and (max-width: 600px) {
+    .names {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: -25px;
+        text-align: center;
+    }
+
+    .final-scoree {
+        width: 80%;
+
+    }
+    .restart-btnplace{
+        display: flex;
+        justify-content: center;
+        margin-right: 0rem;
+        margin-top: 7rem;
+        align-items: center;
+    }  
+}
